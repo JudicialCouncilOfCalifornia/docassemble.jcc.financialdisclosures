@@ -904,11 +904,8 @@ subquestion: |
 	# Your Court Information
 fields:
 	- "Which Court did you file in for Divorce?": court_county
-		input type: dropdown
-		required: true
 		datatype: text
-		choices:
-			- "San Francisco": "San Francisco"
+		required: true
 
 	- "Court Street Address": court_street_address
 		datatype: text
