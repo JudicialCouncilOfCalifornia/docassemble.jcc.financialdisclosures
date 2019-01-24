@@ -3575,9 +3575,9 @@ mandatory: |
   True
 code: |
   if len(missing_files) > 0:
-    send_email(to="jack.madans-t@jud.ca.gov", template=incomplete_email)
+    send_email(to=party_email, template=incomplete_email)
   else:
-    send_email(to="jack.madans-t@jud.ca.gov", template=complete_email)
+    send_email(to=party_email, template=complete_email)
 ---
 mandatory: |
 	True
@@ -4378,8 +4378,8 @@ content: |
 
   % for proof in missing_files:
   ${proof}
+
   % endfor
-  [INSERT MISSING DOC here]
 
   Once you complete the form, file it with your Court clerk. 
 
@@ -4391,29 +4391,33 @@ code: |
     Addendum_to_Income_and_Expense_Declaration_template_039e62acbd9c
   ]
   proofs = [
-    tax_return_proof,
-    past_employment_pay_stubs,
-    current_employer_pay_stubs1,
-    employer_pay_stubs2,
-    employer_pay_stubs3,
-    dividend_investment_proof,
-    rental_investment_proof,
-    trust_investment_proof,
-    other_investment_proof,
-    additional_income_proof,
-    business_income_proof,
-    business_income_proof2,
-    business_income_proof3,
-    extra_healthcare_proof,
-    major_loss_proof,
-    other_relationship_children_hardship_proof
+    "tax_return_proof",
+    "past_employment_pay_stubs",
+    "current_employer_pay_stubs1",
+    "employer_pay_stubs2",
+    "employer_pay_stubs3",
+    "dividend_investment_proof",
+    "rental_investment_proof",
+    "trust_investment_proof",
+    "other_investment_proof",
+    "additional_income_proof",
+    "business_income_proof",
+    "business_income_proof2",
+    "business_income_proof3",
+    "extra_healthcare_proof",
+    "major_loss_proof",
+    "other_relationship_children_hardship_proof"
   ]
   missing_files = []
-  for proof in proofs:
-    if proof:
-      all_files.append(proof)
-    else:
-      missing_files.append(proof)
+	all_vars = all_variables()
+  for proof_name in proofs:
+		proof_obj = all_vars.get(proof_name)
+    if proof_obj is not None:
+			if proof_obj != "None":
+				all_files.append(value(proof_name))
+			else:
+				proof_title = proof_name.replace('_proof', '').replace('_', ' ').strip().title()
+				missing_files.append(proof_title)
 
   fl150_with_attachments = pdf_concatenate(*all_files)
 ---
@@ -4430,6 +4434,3 @@ content: |
   Print your form and file it with your Court clerk, if you are ready.
 
   If you have any questions or feedback send an email to jack.madans-t@jud.ca.gov
----
-mandatory: True
-code: |
