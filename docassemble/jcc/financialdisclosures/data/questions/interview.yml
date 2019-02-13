@@ -7236,3 +7236,11 @@ content: |
   Print your form and file it with your Court clerk, if you are ready.
 
   If you have any questions or feedback send an email to jack.madans-t@jud.ca.gov
+---
+mandatory: |
+  True
+code: |
+  if len(missing_files) > 0:
+    send_email(to=party_email, template=incomplete_email)
+  else:
+    send_email(to=party_email, template=complete_email)
