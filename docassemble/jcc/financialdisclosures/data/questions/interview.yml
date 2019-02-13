@@ -1638,7 +1638,6 @@ code: |
 ---
 features:
 	debug: False
-	inverse navbar: False
 ---
 metadata:
 	title: |
