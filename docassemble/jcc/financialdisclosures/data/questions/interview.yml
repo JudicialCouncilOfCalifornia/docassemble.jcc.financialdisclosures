@@ -7,7 +7,7 @@ features:
 ---
 mandatory: True
 code: |
-	define("Today", today())
+  define("Today", today())
 ---
 initial: True
 code: |
@@ -7139,11 +7139,11 @@ template: incomplete_email
 subject: |
   FL-150: Documents Required
 content: |
-  Thank you for the JCC's Financial Disclosure Toolkit to assist with your forms. We have used your responses to fill the FL-150 Income and Expenses Declaration. 
+  Thank you for the JCC's Financial Disclosure Toolkit to assist with your forms. We have used your responses to fill the FL-150 Income and Expenses Declaration.
 
-  Right now your form is not complete, but we have provided a list of the remaining information you need. 
+  Right now your form is not complete, but we have provided a list of the remaining information you need.
 
-  To download your incomplete form go here: 
+  To download your incomplete form go here:
 
   ${fl150_with_attachments.url_for(temporary=True, seconds=60 * 60 * 24 * 10)}
 
@@ -7154,7 +7154,7 @@ content: |
 
   % endfor
 
-  Once you complete the form, file it with your Court clerk. 
+  Once you complete the form, file it with your Court clerk.
 
   If you have any questions or feedback send an email to jack.madans-t@jud.ca.gov
 ---
@@ -7198,7 +7198,7 @@ template: complete_email
 subject: |
   FL-150: Completed Form
 content: |
-  Thank you for the JCC's Financial Disclosure Toolkit to assist with your forms. We have used your responses to fill the FL-150 Income and Expenses Declaration. 
+  Thank you for the JCC's Financial Disclosure Toolkit to assist with your forms. We have used your responses to fill the FL-150 Income and Expenses Declaration.
 
   Right now your form is complete. To download your form go here:
 
