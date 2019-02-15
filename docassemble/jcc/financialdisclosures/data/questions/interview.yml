@@ -1,6 +1,6 @@
 ---
 modules:
-	- docassemble.base.util
+- docassemble.base.util
 ---
 features:
   bootstrap theme: style.css
@@ -1791,7 +1791,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -2012,7 +2012,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -2180,7 +2180,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -2588,7 +2588,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -2781,7 +2781,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -2950,7 +2950,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -3139,7 +3139,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -3307,7 +3307,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -3476,7 +3476,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -3665,7 +3665,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -3833,7 +3833,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -3989,7 +3989,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -4419,7 +4419,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -4598,7 +4598,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -4770,7 +4770,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -5714,7 +5714,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -6267,7 +6267,7 @@ script: |
 
     // We need to be able to map in-page checkbox labels to their actual values
     var checkboxLabelsAndValues = {
-      
+
     }
 
     var showIfCallbacks = [
@@ -7073,44 +7073,25 @@ attachment:
     # **Addendum to Income and Expense Declaration**
 		Where no information is contained under the question headers below, the full content of the response will be found in the FL-150 form itself (if applicable).
 
-
-
 		_Question 1--Other Jobs_
-
 
 		${insert_question1otherjobs_employment2_paragraph if defined("insert_question1otherjobs_employment2_paragraph") else ""}
 
 		${insert_question1otherjobs_employment3_paragraph if defined("insert_question1otherjobs_employment3_paragraph") else ""}
 
-
-
-
 		_Question 4--Other party's income_
-
 
 		${addendum_other_party_income_is_based_on if defined("addendum_other_party_income_is_based_on") else ""}
 
-
-
-
 		_Question 8--Additional Income_
-
 
 		${addendum_source_of_other_income if defined("addendum_source_of_other_income") else ""}
 
-
-
-
 		_Question 9--Change in income_
-
 
 		${addendum_income_change_description if defined("addendum_income_change_description") else ""}
 
-
-
-
 		_Question 10g--Necessary job-related expenses not reimbursed by employer_
-
 
 		${insert_deduction_job_related_addendum_paragraph1 if defined("insert_deduction_job_related_addendum_paragraph1") else ""}
 
@@ -7118,11 +7099,7 @@ attachment:
 
 		${insert_deduction_job_related_addendum_paragraph3 if defined("insert_deduction_job_related_addendum_paragraph3") else ""}
 
-
-
-
 		_Question 12--The following people live with me_
-
 
 		${insert_question12_person6_paragraph if defined("insert_question12_person6_paragraph") else ""}
 
@@ -7130,35 +7107,21 @@ attachment:
 
 		${insert_question12_person8_paragraph if defined("insert_question12_person8_paragraph") else ""}
 
-
-
-
 		_Question 14--Installment payments and debts not listed above_
-
 
 		${insert_question14_debt7_paragraph if defined("insert_question14_debt7_paragraph") else ""}
 
 		${insert_question14_debt8_paragraph if defined("insert_question14_debt8_paragraph") else ""}
 
-
-
-
 		_Question 19--Special hardships_
-
 
 		Names and ages of those children: ${addendum_other_relationship_children_name_and_ages if defined("addendum_other_relationship_children_name_and_ages") else ""}
 
-
 		The expenses listed in a, b, and c create an extreme hardship because: ${addendum_special_hardship_explanation if defined("addendum_special_hardship_explanation") else ""}
-
-
-
 
 		_Question 20--Other information I want the court to know concerning support in my case_
 
-
 		${addendum_additional_information_about_support if defined("addendum_additional_information_about_support") else ""}
-
 
 		THIS IS THE END OF THE ADDENDUM
 ---
