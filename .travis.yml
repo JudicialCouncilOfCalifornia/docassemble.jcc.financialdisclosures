@@ -1,0 +1,9 @@
+dist: xenial
+language: python
+python:
+- "3.7"
+if: type = push
+script:
+- pip3 install --upgrade setuptools pip
+- pip3 install yamllint
+- yamllint docassemble/jcc/financialdisclosures/data/questions
